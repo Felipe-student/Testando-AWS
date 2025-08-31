@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$db   = "meu_site";
-$user = "usuario_site";   // criado no MariaDB
-$pass = "senha_segura";   // senha definida
+$db   = "mensagens";
+$user = ""; 
+$pass = "";
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", $user, $pass, [
@@ -13,3 +13,4 @@ try {
     die("Erro na conexão: " . $e->getMessage());
 }
 ?>
+
