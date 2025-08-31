@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site Estático</title>
+    <title>Meu Site Dinâmico</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -34,6 +34,27 @@
             margin: 20px auto;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        form {
+            margin-top: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
         footer {
             background-color: #333;
             color: white;
@@ -52,17 +73,31 @@
     </header>
 
     <nav>
-        <a href="#">Início</a>
+        <a href="index.php">Início</a>
         <a href="#">Sobre</a>
-        <a href="#">Contato</a>
+        <a href="mensagens.php">Mensagens</a>
     </nav>
 
     <div class="main-content">
         <h2>Sobre o site</h2>
-        <p>Este é um exemplo de um site estático simples, desenvolvido com HTML e CSS. Você pode personalizar o conteúdo conforme necessário.</p>
+        <p>Este é um exemplo de um site dinâmico simples, agora com banco de dados!</p>
 
         <h3>Como funciona?</h3>
-        <p>Um site estático é composto por arquivos HTML, CSS e, opcionalmente, JavaScript, que são renderizados diretamente pelo navegador. O conteúdo não muda dinamicamente, a menos que haja uma interação com o usuário.</p>
+        <p>Você pode enviar uma mensagem no formulário abaixo. Ela será salva no MariaDB e poderá ser vista na página "Mensagens".</p>
+
+        <h3>Entre em contato</h3>
+        <form action="salvar_mensagem.php" method="POST">
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" required><br>
+
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br>
+
+            <button type="submit">Enviar</button>
+        </form>
     </div>
 
     <footer>
