@@ -1,4 +1,6 @@
-
+Feito em dupla
+Felipe Camargo
+Sahel Luis
 
 sudo apt upgrade -y vs sudo dnf upgrade -y
 sudo apt update
