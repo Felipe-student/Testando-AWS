@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
 $db   = "mensagens";
-$user = ""; 
-$pass = "";
+$user = "root"; 
+$pass = "ifsp";
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", $user, $pass, [
@@ -13,4 +13,5 @@ try {
     die("Erro na conexão: " . $e->getMessage());
 }
 ?>
+
 
