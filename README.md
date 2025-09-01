@@ -1,3 +1,5 @@
+
+
 sudo apt upgrade -y vs sudo dnf upgrade -y
 sudo apt update
 sudo apt install -y apache2 wget php libapache2-mod-php php-mysql php-json php-dev vs sudo dnf install -y httpd wget php-fpm php-mysqli php-json php php-devel
